@@ -26,9 +26,7 @@ export default function TripDetailScreen() {
   const [isMapExpanded, setIsMapExpanded] = useState(false);
 
   useEffect(() => {
-    fetchData(
-      "https://script.google.com/macros/s/AKfycbwDmLoYz8Ca1icqVVn4874ultLjyRGsLYuhWUm5uMdY4LTNyXfLXNskCjahKgNyPibG/exec",
-    )
+    fetchData()
       .then((res: VehicleTrackerData) => {
         setData(res);
         setLoading(false);
